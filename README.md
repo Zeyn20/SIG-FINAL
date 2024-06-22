@@ -1,3 +1,3 @@
 # SIG-FINAL
 ## INSTALL
-$npm install
+>npm install
