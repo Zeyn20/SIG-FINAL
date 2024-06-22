@@ -1,2 +1,3 @@
 # SIG-FINAL
-## HOLA
+## INSTALL
+$npm install
