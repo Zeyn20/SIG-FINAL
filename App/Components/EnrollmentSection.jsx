@@ -19,7 +19,7 @@ export default function EnrollmentSection({module}) {
   return (
     <View style={{
       padding:15,
-      backgroundColor:Colors.primary,
+      backgroundColor:Colors.primarybold,
       borderRadius:10
     }}>
       {isEnrolled?

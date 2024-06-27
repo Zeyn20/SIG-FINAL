@@ -44,11 +44,17 @@ export default function WatchLessons() {
           paddingHorizontal:8
         }}>
           <Text style={{
-            color:Colors.white,
+            color:Colors.primarybold,
             textAlign:'center',
             fontFamily:'outfit'
           }}>Marcar completado</Text>
         </TouchableOpacity>
+      </View>
+      <View>
+        <Text style={{
+          marginTop:15,
+          fontFamily:'outfit'
+        }}>{capitulo.descripcion}</Text>
       </View>
     </View>
   )

@@ -5,6 +5,7 @@ import HomeScreen from '../Screens/HomeScreen'
 import ModuleDetailScreen from '../Screens/ModuleDetailScreen'
 import TabNavigation from './TabNavigation'
 import WatchLessons from '../Screens/WatchLessons'
+import LoginScreen from '../Screens/LoginScreen'
 
 const Stack = createStackNavigator()
 

@@ -6,6 +6,10 @@ import TabNavigation from './App/Navigations/TabNavigation';
 import { useState } from 'react';
 import { useFonts } from 'expo-font';
 import HomeNavigation from './App/Navigations/HomeNavigation';
+import WelcomeScreen from './App/Screens/WelcomeScreen';
+import SelectAvatarScreen from './App/Screens/SelectAvatarScreen';
+import { createStackNavigator } from '@react-navigation/stack';
+import RegisterScreen from './App/Screens/RegisterSrcreen';
 
 export default function App() {
 
@@ -15,28 +19,18 @@ export default function App() {
     'outfit-bold': require('./assets/fonts/Outfit-Bold.ttf'),
   });
 
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  const handleLogin = () => {
-    // Aquí iría la lógica de autenticación
-    setIsAuthenticated(true);
-  };
-
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-  };
+  const Stack = createStackNavigator();
 
   return (
-    <View style={styles.container}>
-      {/* <LoginScreen /> */}
-      <NavigationContainer>
-      {isAuthenticated ? (
-        <HomeNavigation onLogout={handleLogout} />
-      ) : (
-        <LoginScreen onLogin={handleLogin} />
-      )}
-      </NavigationContainer>
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerShown:false}}>
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
+      <Stack.Screen name="AvatarSelection" component={SelectAvatarScreen} />
+      <Stack.Screen name="Home" component={HomeNavigation} />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
 
