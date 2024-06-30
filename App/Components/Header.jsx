@@ -31,7 +31,7 @@ export const userData = [
 
 export default function Header() {
 
-  const user = userData[0];
+  const user = userData[1];
 
   return (
     <View style={{display:'flex', flexDirection:'row', gap:5, alignItems:'center'}}>

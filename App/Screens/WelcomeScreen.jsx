@@ -15,12 +15,12 @@ export default function WelcomeScrenn({ navigation  }) {
           padding:10,
           width:'100%',
           borderRadius:99,
-          marginBottom:10
+          marginBottom:10,
+          alignItems: 'center'
         }}
           onPress={() => navigation.navigate('AvatarSelection')}
         >
           <Text style={{
-            alignSelf:'center',
             fontFamily:'outfit-bold',
             fontSize: 18
           }}>SI</Text>
@@ -30,12 +30,12 @@ export default function WelcomeScrenn({ navigation  }) {
           padding:10,
           width:'100%',
           borderRadius:99,
-          marginBottom:10
+          marginBottom:10,
+          alignItems: 'center'
         }}
           onPress={() => navigation.navigate('Login')}
         >
           <Text style={{
-             alignSelf:'center',
              fontFamily:'outfit-bold',
              fontSize: 18,
           }}>NO</Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    fontSize: 26,
+    fontSize: 25,
     fontFamily: 'outfit-bold',
     marginBottom: 5,
   },

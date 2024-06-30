@@ -17,8 +17,8 @@ export default function SelectAvatarScreen() {
     },
     {
       id:3,
-      title:'gey',
-      imgSrc:require('./../../assets/images/osito1.png')
+      title:'niño',
+      imgSrc:require('./../../assets/images/osito2.png')
     }
   ]
 
