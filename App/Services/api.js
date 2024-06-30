@@ -28,4 +28,20 @@ export const login = async (credentials) => {
     }
 };
 
-// Puedes agregar otras funciones de API aquí, como createModulo, getModulos, etc.
+export const getModulos = async () => {
+    try {
+        const response = await api.get('/modulos'); // Realiza la solicitud GET a la API
+        return response.data; // Retorna los datos de la respuesta (array de módulos)
+    } catch (error) {
+        throw error.response?.data || { message: 'Error al obtener módulos' }; // Maneja errores
+    }
+};
+
+export const getModuloById = async (id) => {
+    try {
+        const response = await api.get(`/modulos/${id}`);
+        return response.data;
+    } catch (error) {
+        throw error.response?.data || { message: 'Error fetching module details' };
+    }
+};
